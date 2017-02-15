@@ -2,8 +2,8 @@
 
 // Canvas constants
 const canvas = {
-	height: 800,
-	width: 800
+	height: 400,
+	width: 400
 }
 
 /**
@@ -84,18 +84,18 @@ class Grid {
 	 * Draw all squares in grid
 	 */
 	draw() {
-		for(let i = 0; i < this.squares.length; i++) {
-			this.squares[i].draw()
-		}
+		this.squares.forEach((square) => {
+			square.draw()
+		})
 	}
 
 	/**
 	 * Rotate all squares in grid
 	 */
 	rotate(r) {
-		for(let i = 0; i < this.squares.length; i++) {
-			this.squares[i].rotate(r)
-		}
+		this.squares.forEach((square) => {
+			square.rotate(r)
+		})
 	}
 }
 
